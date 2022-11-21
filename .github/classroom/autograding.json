@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "Run hashtable tests 1",
+      "setup": "",
+      "run": "timeout 60 make clean test-1-hashtable",
+      "input": "",
+      "output": "All tests passed (9 assertions in 2 test cases)",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "Run hashtable tests 2",
+      "setup": "",
+      "run": "timeout 60 make test-2-hashtable",
+      "input": "",
+      "output": "All tests passed (12 assertions in 2 test cases)",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 15
+    },
+    {
+      "name": "Run hashtable tests 3",
+      "setup": "",
+      "run": "timeout 60 make test-3-hashtable",
+      "input": "",
+      "output": "All tests passed (11 assertions in 1 test case)",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Run hashtable tests 4",
+      "setup": "",
+      "run": "timeout 60 make test-4-hashtable",
+      "input": "",
+      "output": "All tests passed (16 assertions in 2 test cases)",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Run pass server tests",
+      "setup": "",
+      "run": "timeout 60 make test-5-passserver",
+      "input": "",
+      "output": "All tests passed (25 assertions in 5 test cases)",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 20
+    },
+    {
+		"name": "Verify working main in test run",
+		"setup": "make main",
+		"run": "timeout 30 make test-run",
+		"input": "",
+		"output": "Succeed to validate the user bjohn",
+		"comparison": "included",
+		"timeout": 1,
+		"points": 20
+	}
+  ]
+}
