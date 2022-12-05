@@ -2,6 +2,7 @@
 #define HASHTABLE_HPP
 #include <functional>
 #include <vector>
+#include <string>
 
 using namespace std;
 template<class K, class V>
