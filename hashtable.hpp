@@ -4,7 +4,7 @@
 #include <vector>
 
 using namespace std;
-template<typename K, typename V>
+template<class K, class V>
 class HashTable {
   private:
     int capacity;
@@ -15,11 +15,7 @@ class HashTable {
     }
 
   public:
-    explicit HashTable(int capacity = 101) {
-      this->capacity = capacity;
-      size = 0;
-      buckets.resize(capacity);
-    }
+    explicit HashTable(int capacity = 101): capacity(capacity), size(0) { buckets.resize(capacity);}
     
     bool Exist(K key, V value) {
       int index = Hash(key);
@@ -30,6 +26,7 @@ class HashTable {
           return true;
       return false;
     }
+
     bool HasKey(K key){
       int index = Hash(key);
       for(auto& pair: buckets.at(index)) 
